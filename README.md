@@ -1,4 +1,4 @@
-<h1> Algoritmo da mochila em python</h1>
+<h1 align="center"> Algoritmo da mochila em python</h1>
 <p>
   Joãozinho, apesar de estar no início do curso de computação, já andou pesquisando e se deparou com um problema interessante de otimização chamado de Problema da Mochila. O problema consiste em levar em uma mochila os objetos que somem o maior valor possível, mas sem extrapolar sua capacidade de peso. Cada objeto possui um peso e um valor associado.
 Esse
@@ -46,7 +46,7 @@ Aplicaremos cruzamento de ponto único entre as duas primeiras soluções fornec
   Ajude Joãozinho a resolver esse problema. Construa um programa para ler os 6 valores iniciais, aplicar os operadores genéticos e avaliar as soluções obtidas. A saída do programa deve ser formatada e colorida como no exemplo abaixo:
 </p>
 <img src = "https://github.com/ArthurOlive/Problema-da-mochila/blob/master/git_imgs/exec.JPG">
-<h2>INSTRUÇÕES PARA O PROGRAMA EM C++</h2>
+<h2 align="center">INSTRUÇÕES PARA O PROGRAMA EM C++</h2>
 O programa deverá conter uma função para cada uma das tarefas abaixo:
   <ol type = "1">
     <li>
@@ -90,7 +90,7 @@ O programa deverá conter uma função para cada uma das tarefas abaixo:
     </li>
   </ol>
   O programa final deverá conter cinco arquivos, sendo o arquivo problema.cpp aquele que conterá a função main e se encarregará de ler os dados pelo teclado e exibir os resultados do programa.
-  <h2>EXIGÊNCIAS</h2>
+  <h2 align="center">EXIGÊNCIAS</h2>
   <ol type = "1">
   <li>
     Não é permitido usar variáveis globais
