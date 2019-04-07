@@ -24,7 +24,7 @@ using namespace std;
 #define pO 4
 #define pP 1
 
-//Constantes dos preÁos:
+//Constantes dos pre√ßos:
 #define vA 4
 #define vB 4
 #define vC 8
@@ -45,13 +45,13 @@ using namespace std;
 bool funcAvaliar(unsigned short n1) {
 		
 	//variaveis para retorno de dado.
-	int peso = 0;	//variavel armazenar· o peso quando se souber os objetos
-	int valor = 0;	//variavel armazenar· o preÁo quando se souber os objetos
+	int peso = 0;	//variavel armazenar√° o peso quando se souber os objetos
+	int valor = 0;	//variavel armazenar√° o pre√ßo quando se souber os objetos
 
 	//Chama testBit para testar cada bit do numero passado.
 
-	//FunÁ„o poderia ser altamente simplificada utilizando um for.
-	//Os if's a seguir s„o para adicionar os pessoas e o valor definido pela tabelha contida no trabalho
+	//Fun√ß√£o poderia ser altamente simplificada utilizando um for.
+	//Os if's a seguir s√£o para adicionar os pessoas e o valor definido pela tabelha contida no trabalho
 	if(testBit(n1, 0) != 0){
 		peso += pP;
 		valor += vP;
@@ -136,7 +136,7 @@ bool funcAvaliar(unsigned short n1) {
 
 	cout << right; cout.width(6); cout << n1 << " \xC4 ";
 	/*
-	para resolver o problema do espaÁo depois do $, utiliza-se a forma. 
+	para resolver o problema do espa√ßo depois do $, utiliza-se a forma. 
 	cout << right; cout.width(3); cout << "$"+to_string(valor) << " \xC4 ";
 	Tambem deve-se adicionar o #include <string>
 	*/
@@ -144,7 +144,7 @@ bool funcAvaliar(unsigned short n1) {
 	cout << right; cout.width(3); cout << valor << " \xC4 ";
 	cout << right; cout.width(2); cout << peso << "Kg" << " \xC4 ";
 
-	//Teste para retornar se o peso È ou n„o inferior ao limite de peso maximo da mochila.
+	//Teste para retornar se o peso √© ou n√£o inferior ao limite de peso maximo da mochila.
 	if (peso <= P_MOCHILA_MAX) {
 		return true;
 	}
@@ -155,18 +155,18 @@ bool funcAvaliar(unsigned short n1) {
 
 unsigned short cruzPtUnic(unsigned short n1, unsigned short n2) {
 /*
-					<--		ExplicaÁ„o do principio usado	 -->
+					<--		Explica√ß√£o do principio usado	 -->
 
-Patindo do principio que um numero qualquer È formado por bits, pode-se ent„o obter os bits da posiÁ„o
-1 ate 8 da primeira soluÁ„o, e depois os bits da posiÁ„o de 9 ‡ 16 da segunda soluÁ„o, determinado esses 
-numeros por um AND, È realizado uma soma dos inteiros resultantes de cada bit. Ou seja deve-se realizar 
-uma mascara que receba um bit, que se desloca para a esqueda, sendo esse controle controlado pelo o padr„o
+Patindo do principio que um numero qualquer √© formado por bits, pode-se ent√£o obter os bits da posi√ß√£o
+1 ate 8 da primeira solu√ß√£o, e depois os bits da posi√ß√£o de 9 √† 16 da segunda solu√ß√£o, determinado esses 
+numeros por um AND, √© realizado uma soma dos inteiros resultantes de cada bit. Ou seja deve-se realizar 
+uma mascara que receba um bit, que se desloca para a esqueda, sendo esse controle controlado pelo o padr√£o
 de 1 ate 8 e de 9 ate 16. 
-Para cada retorno positivo ir· ser realizado a soma dos numeros resultantes dos binario e o mesmo representar· 
-os binarios de 1 ate 8 de uma soluÁ„o e 9 ate 16 da outra soluÁ„o. Apos isso deve-se realizar a soma de ambos 
+Para cada retorno positivo ir√° ser realizado a soma dos numeros resultantes dos binario e o mesmo representar√° 
+os binarios de 1 ate 8 de uma solu√ß√£o e 9 ate 16 da outra solu√ß√£o. Apos isso deve-se realizar a soma de ambos 
 os valores.
 
-Exemplo: 2 cujo binario È 10 e 1 cujo binario È 01, quando somados resultam em 3, cujo binario È 11.
+Exemplo: 2 cujo binario √© 10 e 1 cujo binario √© 01, quando somados resultam em 3, cujo binario √© 11.
 
 um AND entre um binario e uma mascara retorna o valor se e somente se o numero do binario existir.
 	
@@ -192,13 +192,13 @@ unsigned short cruzArit(unsigned short n1, unsigned short n2) {
 <--------------------------------------------------------------------------------------------------------------------------->
 								Explicando um principio extra.
 
-Utilizando a funÁ„o XOR como mecionado os testes de ligado e desligado nesta duas funÁıes em especifico se torna inutil,
-pois a utilizaÁ„o de teste so serve para o caso de quando as funÁıes de binarias apenas ligam e desligam o bit, ou seja,
-a funÁ„o ligar bit apenas liga, e somente liga, mesmo se o bit ja estiver ligado, e a funÁ„o deligar bit so deliga, mesmo que o o bit
+Utilizando a fun√ß√£o XOR como mecionado os testes de ligado e desligado nesta duas fun√ß√µes em especifico se torna inutil,
+pois a utiliza√ß√£o de teste so serve para o caso de quando as fun√ß√µes de binarias apenas ligam e desligam o bit, ou seja,
+a fun√ß√£o ligar bit apenas liga, e somente liga, mesmo se o bit ja estiver ligado, e a fun√ß√£o deligar bit so deliga, mesmo que o o bit
 ja esteja desligado.
 
-Ou seja, utilizando-se o XOR, economiza-se 3 if's desnecess·rio, pela caracteristica de nao ser necessario saber se o bit est· ligado ou
-desligado, o XOR vai sempre ir· inverter os bits.
+Ou seja, utilizando-se o XOR, economiza-se 3 if's desnecess√°rio, pela caracteristica de nao ser necessario saber se o bit est√° ligado ou
+desligado, o XOR vai sempre ir√° inverter os bits.
 
 */
 unsigned short mutSimples(unsigned short n1) {
@@ -206,7 +206,7 @@ unsigned short mutSimples(unsigned short n1) {
 
 	//se estiver bit = 1 entao coloque o bit = 0; se o bit = 0 coloque o bit = 1.
 
-	//se o bit estiver ligado, desligue com a funÁ„o desligar bit.
+	//se o bit estiver ligado, desligue com a fun√ß√£o desligar bit.
 	//senao o bit esta desligado, entao desligue o bit
 	if (testBit(n1, 9) == 1) {
 		res = desBit(n1,9);
@@ -222,9 +222,9 @@ unsigned short mutSimples(unsigned short n1) {
 unsigned short mutDupla(unsigned short n1) {
 	unsigned short res;//variavel resultante
 
-	//se o bit estiver ligado, desligue com a funÁ„o desligar bit.
+	//se o bit estiver ligado, desligue com a fun√ß√£o desligar bit.
 	//senao o bit esta desligado, entao desligue o bit
-	//repete-se para as 2 posiÁıes de bits, 3 e 12, comeÁando a contar a partir do 0.
+	//repete-se para as 2 posi√ß√µes de bits, 3 e 12, come√ßando a contar a partir do 0.
 
 	if (testBit(n1,3) == 1) {
 		res = desBit(n1, 3);
