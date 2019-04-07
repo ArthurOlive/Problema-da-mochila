@@ -3,7 +3,9 @@
   Joãozinho, apesar de estar no início do curso de computação, já andou pesquisando e se deparou com um problema interessante de otimização chamado de Problema da Mochila. O problema consiste em levar em uma mochila os objetos que somem o maior valor possível, mas sem extrapolar sua capacidade de peso. Cada objeto possui um peso e um valor associado.
 Esse
 </p>
+<p align= "center">
 <img src="https://github.com/ArthurOlive/Problema-da-mochila/blob/master/git_imgs/mochila.JPG"/>
+</p>
 <p>
 Esse problema pode ser resolvido por várias técnicas que incluem programação dinâmica, algoritmos gulosos, e algoritmos genéticos. Como Joãozinho tem interesse pela área de Inteligência Artificial, ele resolveu usar a técnica de algoritmos genéticos.
 Joãozinho não será capaz de resolver completamente o problema, pois ele ainda está iniciando o aprendizado de programação de computadores, mas ele já pode construir a base do sistema necessário para a solução.
