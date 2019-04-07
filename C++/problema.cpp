@@ -1,20 +1,20 @@
 /*
-	Programa do trabalho pratico da disciplina de programaÁ„o.
+	Programa do trabalho pratico da disciplina de programa√ß√£o.
 	Autor: Arthur Vitor Matias de Oliveira
 	Professor: Judson
 	Data: 14 - 11 - 18
 */
 
-//biblioteca padr„o de input e output
+//biblioteca padr√£o de input e output
 #include <iostream>
 #include <Windows.h>
 using namespace std;
 
-//chama os dois arquivos de cabeÁario criados.
+//chama os dois arquivos de cabe√ßario criados.
 #include "genetico.h"
 #include "binario.h"
 
-//DefiniÁ„o de cores
+//Defini√ß√£o de cores
 #define COR_DEFAULT 7
 #define COR_CORRECT 2
 #define COR_ERRO 12
@@ -22,48 +22,48 @@ using namespace std;
 /*
 						<--		Roteiro		-->
 	1 passo:
-	-> cruzamento de ponto ˙nico entre as duas primeiras soluÁıes fornecidas pelo
-	usu·rio.
-	-> cruzamento aritmÈtico entre a terceira e quarta soluÁ„o.
-	-> mutaÁ„o simples sobre a quinta soluÁ„o.
-	-> mutaÁ„o dupla sobre a sexta e ˙ltima soluÁ„o.
+	-> cruzamento de ponto √∫nico entre as duas primeiras solu√ß√µes fornecidas pelo
+	usu√°rio.
+	-> cruzamento aritm√©tico entre a terceira e quarta solu√ß√£o.
+	-> muta√ß√£o simples sobre a quinta solu√ß√£o.
+	-> muta√ß√£o dupla sobre a sexta e √∫ltima solu√ß√£o.
 
-	OBS: O resultado sevir· para o passo 2.
+	OBS: O resultado sevir√° para o passo 2.
 
 	2 passo:
-	->Criar cada funÁ„o das operaÁıes binarias
+	->Criar cada fun√ß√£o das opera√ß√µes binarias
 */
 
 /*
-					<--		ObeservaÁıes	-->
+					<--		Obeserva√ß√µes	-->
 	Os operadores << e >> movem os bits dentro do conjunto de bits.
 		ex:
 			cout << sol1 << endl; // valor de saida = 1 ou ...00001
 			sol1 = (sol1 << 1);// altera o local do bit
 			cout << sol1; // o valor da saida deve ser ...00010 ou 2;
 
-	O operador 'and' ou '&' funciona como na logica boleana comun sÛ que para bits.
+	O operador 'and' ou '&' funciona como na logica boleana comun s√≥ que para bits.
 	ela atera os bits de forma que permanece 1 apenas se o bit das duas
 	variaveis forem 1, no resto se aplica o 0.
 		ex:
 			001 & 011 = 001.
 
-	As variaveis s„o para definir um conjunto de bits aleatorios, que nesse casso vai ate
-	16 bits. isso ser· processado pelo programa para retornar 1 e 0 para saber se o profuto
-	estar· ou nao na mochila.
+	As variaveis s√£o para definir um conjunto de bits aleatorios, que nesse casso vai ate
+	16 bits. isso ser√° processado pelo programa para retornar 1 e 0 para saber se o profuto
+	estar√° ou nao na mochila.
 
 	O cruzamento de ponto unico preve copiar os primeiros 8 bits de uma
-	soluÁ„o e os outros 8 bits da outra, seguindo de uma soma.
+	solu√ß√£o e os outros 8 bits da outra, seguindo de uma soma.
 */
 
 /*
 						<--		OBS		-->
-	O codigo foi alterado, retirando todos loop For de todas as funÁıes.
+	O codigo foi alterado, retirando todos loop For de todas as fun√ß√µes.
 */
 
 int main() {
 
-	//variaveis que alocaram as soluÁıes
+	//variaveis que alocaram as solu√ß√µes
 	unsigned short sol1, sol2, sol3, sol4, sol5, sol6;
 
 	//HANDLE para alterar a cor do "ok" e do "x". 
@@ -81,7 +81,7 @@ int main() {
 
 	cout << "\n";
 	
-	//Escreve na tela o resultado, avaliando o retorno da funÁ„o avaliar e exibindo o 'x' ou 'ok' depedendo do retorno de funcAvaliar().
+	//Escreve na tela o resultado, avaliando o retorno da fun√ß√£o avaliar e exibindo o 'x' ou 'ok' depedendo do retorno de funcAvaliar().
 
 	cout << "  Resultado da Avaliacao \n";
 	cout << " ------------------------\n";
@@ -148,7 +148,7 @@ int main() {
 
 	cout << " ------------------------\n";
 
-	//chama uma funÁ„o dentro de uma funÁ„o
+	//chama uma fun√ß√£o dentro de uma fun√ß√£o
 	//Exibe os valores do passo 1
 	if (funcAvaliar(cruzPtUnic(sol1, sol2)) == true) {
 		SetConsoleTextAttribute(hConsole, COR_CORRECT);	//coloca a cor verde no elemento "Ok".
