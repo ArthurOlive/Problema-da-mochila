@@ -1,6 +1,6 @@
 /*
-		<--		ExplicaÁ„o do principio usado	 -->
-Pecebi que utilizando da comparaÁ„o com o operador &. pode-se
+		<--		Explica√ß√£o do principio usado	 -->
+Pecebi que utilizando da compara√ß√£o com o operador &. pode-se
 obter um numero equivalente a a um binario especifico.
 	ex:
 		4  = 0100;
@@ -10,31 +10,31 @@ obter um numero equivalente a a um binario especifico.
 		10 & 8 = 8;
 		1010 and 1000 = 1000;
 
-Peceba que ele leva em consideraÁ„o os binarios do numero 8 e 10
-e compara cada coluna em quest„o comparando bit a bit. O retorno
-È equivalente a uma operaÁ„o AND entre os dois binarios.
+Peceba que ele leva em considera√ß√£o os binarios do numero 8 e 10
+e compara cada coluna em quest√£o comparando bit a bit. O retorno
+√© equivalente a uma opera√ß√£o AND entre os dois binarios.
 */
 
 #define var 1
 
 unsigned short andBit(unsigned short n1, unsigned short n2) {
-	unsigned short res;		//variavel que receber· o resultado
+	unsigned short res;		//variavel que receber√° o resultado
 
-	res = (n1 & n2);//operaÁ„o "and" binaria.
+	res = (n1 & n2);//opera√ß√£o "and" binaria.
 
-	return res;		//retorna o resultado da operaÁ„o
+	return res;		//retorna o resultado da opera√ß√£o
 }
 
 unsigned short orBit(unsigned short n1, unsigned short n2) {
-	unsigned short res;		//variavel que receber· o resultado
+	unsigned short res;		//variavel que receber√° o resultado
 
-	res = (n1 | n2);//OperaÁ„o "or"
+	res = (n1 | n2);//Opera√ß√£o "or"
 
 	return res;
 }
 
 /*<------------------------------------------------------------------------------------------------->
-	As operaÁıes ligar e desligar bit ao meu ver sao desnecessarias, ja que a funÁ„o XOR, realiza a
+	As opera√ß√µes ligar e desligar bit ao meu ver sao desnecessarias, ja que a fun√ß√£o XOR, realiza a
 	troca dos bits de maneita que se estiver ligado desligue, e se estiver deligado desligue.
 	   Tabela verdade
 		A	B	XOR
@@ -45,18 +45,18 @@ unsigned short orBit(unsigned short n1, unsigned short n2) {
 */
 
 unsigned short ligBit(unsigned short n1, unsigned short posic) {
-	unsigned short res;//variavel que receber· o resultado e uma variavel binaria.
+	unsigned short res;//variavel que receber√° o resultado e uma variavel binaria.
 	
 	//rever o problema com o operador orBit
-	res = orBit(n1, (var << posic));	//OperaÁ„o "or" com a mascara.
+	res = orBit(n1, (var << posic));	//Opera√ß√£o "or" com a mascara.
 
 	return res;
 }
 
 unsigned short desBit(unsigned short n1, unsigned short posic) {
-	unsigned short res;//variavel que receber· o resultado, e uma variavel binaria.
+	unsigned short res;//variavel que receber√° o resultado, e uma variavel binaria.
 
-	res = andBit(n1, ~(var << posic));//OperaÁ„o "and" com a mascara negada.
+	res = andBit(n1, ~(var << posic));//Opera√ß√£o "and" com a mascara negada.
 
 	return res;
 }
@@ -75,14 +75,14 @@ bool testBit(unsigned short n1, unsigned short posic) {
 unsigned short lowBit(unsigned short n1) {
 	unsigned short res = 0;
 	/*
-	funÁ„o equivalente a de baixo utilizando um for.
+	fun√ß√£o equivalente a de baixo utilizando um for.
 	//retirar esse for
 	for (int i = 0; i < 8; i++) {
 			res += andBit(n1, (var << i));//move o binario pelas colunas
 	}
 	*/
 	
-	//Utilizando um for retira-se essa repetiÁ„o desencessaria desses elementos a baixo
+	//Utilizando um for retira-se essa repeti√ß√£o desencessaria desses elementos a baixo
 	
 	/*
 	Recebe o somatorio binario dos elementos, partindo do principio que o somatorio das mascaras que contem 1, nao interem no
@@ -94,7 +94,7 @@ unsigned short lowBit(unsigned short n1) {
 	mascara 5 = 0000000000010000
 	...
 	---------------------------- +  //somando tudo.
-	res		  = 0000000000011111	//somente se a operaÁ„o AND retornar positivo a mascara È somada.
+	res		  = 0000000000011111	//somente se a opera√ß√£o AND retornar positivo a mascara √© somada.
 	*/
 
 	res += andBit(n1, (var << 0));
@@ -114,7 +114,7 @@ unsigned short hightBit(unsigned short n1) {
 	//for para alterar o bit
 
 	/*
-	funÁ„o equivalente a de baixo utilizando um for.
+	fun√ß√£o equivalente a de baixo utilizando um for.
 	//retirar esse for
 	for (int i = 8; i < 16; i++) {
 		res += andBit(n1, (var << i));//move o binario pelas colunas
@@ -131,7 +131,7 @@ unsigned short hightBit(unsigned short n1) {
 	mascara 5 = 0000000000010000
 	...
 	---------------------------- +  //somando tudo.
-	res		  = 0000000000011111	//somente se a operaÁ„o AND retornar positivo a mascara È somada.
+	res		  = 0000000000011111	//somente se a opera√ß√£o AND retornar positivo a mascara √© somada.
 */
 	res += andBit(n1, (var << 8));
 	res += andBit(n1, (var << 9));
